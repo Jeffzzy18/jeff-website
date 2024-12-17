@@ -1,0 +1,59 @@
+  /* Clean default css style */
+* {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    min-height: 100vh;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  hr {
+    margin: 0px;
+  }
+  
+  .zero-margin-hr {
+    margin: 0px;
+  }
+
+  :root {
+    font-size: 18px; /* 默认根字体大小 */
+  }
+  /* Clean default css style */
+
+  .header-bar {
+    height:40px;
+    border: 1px solid red;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+  }
+  .header-bar-button {
+    color: green;
+    font-size: 1.5rem;
+    margin: 0 20px 0 20px;
+  }
+  .header-bar-translation {
+    display: flex; 
+    margin-left: auto;
+    margin-right: 20px;
+
+  }
+
+  .footer-bar {
+    height: 20px;
+    border: 1px solid red;
+    background-color: pink;
+  }

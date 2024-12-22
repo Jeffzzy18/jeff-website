@@ -56,45 +56,97 @@
 
   }
 
-  .footer-bar {
-      height: 20px;
-      border: 1px solid red;
-      background-color: pink;
-  }
+
 
   .landingPage-hidden {
       opacity: 0;
       transform: translateY(100px);
   }
+
   .landingPage-inner-div {
-    width: 100%;
+      width: 100%;
   }
+
   .landingPage-container {
-    height: 200vh;
+      height: 200vh;
   }
 
   .landingPage-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: top;
-    font-size: 2rem;
-    transition: transform 1s, opacity 1s;
-  }
-  
-  .landingPage-section1-box {
+      height: 100vh;
       display: flex;
+      justify-content: center;
+      align-items: top;
+      /* font-size: 2rem; */
+      transition: transform 1s, opacity 1s;
+  }
+
+  .landingPage-section1-box {
       width: 100%;
       height: 100vh;
+      /* color: white; */
+      /* background-image: url('./assets/background.jpeg'); */
+      background-size: cover;
+      /* 图片填满容器 */
+      background-position: -0px center;
+      /* 图片居中 */
+      background-repeat: no-repeat;
+      /* 防止图片重复 */
       justify-content: space-between;
-      background-color: blueviolet;
+      background-color: grey;
+      position: relative;
+  }
+
+  .landingPage-section1-name {
+      position: absolute;
+      font-size: 4rem;
+      font-weight: 200;
+      top: 35vh;
+      left: 80px;
+
+  }
+
+  .landingPage-section1-position {
+      position: relative;
+      font-size: 2rem;
+      font-weight: 100;
+      top: 45vh;
+      left: 80px;
+      /* margin-top: 200px; */
   }
 
   .landingPage-section2-box {
-      display: flex;
-      width: 100%;
-      height: 100vh;
-      justify-content: space-between;
-      background-color: grey;
+    /* display: flex;
+    width: 60%; 
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    margin: 0 auto;  */
+}
 
-  }
+.landingPage-section2-story {
+    line-height: 1.4;
+    width: 55%;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    margin: 10px auto 0 auto;
+
+}
+
+.landingPage-section2-story ul {
+    padding-left: 25px;
+}
+
+.andingPage-section2-contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto 0 auto;
+}
+
+.footer-bar {
+    display: flex;
+    height: 80px;
+    background-color: pink;
+}

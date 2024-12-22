@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import "../App.css";
 
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+
 const LandingPage = () => {
   const sectionsRef = useRef([]); // 存储所有 sections 的引用
 
@@ -20,12 +23,10 @@ const LandingPage = () => {
       });
     }, options);
 
-    // 观察所有 sections
     sectionsRef.current.forEach((section) => {
       if (section) observer.observe(section);
     });
 
-    // 清理函数：停止观察
     return () => {
       sectionsRef.current.forEach((section) => {
         if (section) observer.unobserve(section);
@@ -35,12 +36,75 @@ const LandingPage = () => {
 
   const section1 = (
     <div className="landingPage-section1-box">
-      <>section1</>
+      <div className="landingPage-section1-name">Zhaoye Zhang</div>
+      <div className="landingPage-section1-position">
+        Artificial Intelligence Engineer & Full Stack Developer
+      </div>
     </div>
   );
   const section2 = (
     <div className="landingPage-section2-box">
-      <>section2</>
+      <div className="landingPage-section2-story">
+        <p>
+          Jeff Zhang is a passionate Master's graduate in Artificial
+          Intelligence from the University of New South Wales, having graduated
+          in September 2024. His interests span AI and full-stack development,
+          with a particular focus on frontend design and intelligent algorithm
+          applications. He enjoys exploring the fusion of technology and
+          creativity to develop practical solutions.
+        </p>
+        <br />
+        <p>His tech stack includes:</p>
+        <ul>
+          <li>Programming Languages: Python, JavaScript, C</li>
+          <li>Frameworks & Tools: React, Flask, Docker, Git, Jira</li>
+          <li>
+            Data Science & Machine Learning: Pandas, Scikit-learn, PyTorch, YOLO
+          </li>
+        </ul>
+        <br />
+
+        <p>His Journey:</p>
+        <ul>
+          <li>
+            Enhancing solar panel inspection efficiency through computer vision
+            for sustainable energy development.
+          </li>
+          <li>
+            Implementing precise image segmentation in smart city applications
+            to optimize urban management.
+          </li>
+          <li>
+            Completing enterprise website restructuring using ReactJS to enhance
+            user experience.
+          </li>
+        </ul>
+
+        <p>
+          In addition, Jeff actively engages in data-driven challenge projects
+          (like Kaggle), gaining valuable practical experience.
+        </p>
+        <br />
+        <p>
+          He believes that technology is not just a tool, but a force for
+          changing the world. Through technological innovation, Jeff aims to
+          explore new possibilities and transform solutions into tangible
+          impacts.
+        </p>
+
+        <p>
+          If his experiences or projects interest you, feel free to reach out
+          via email or visit his GitHub for more information!
+        </p>
+      </div>
+
+      <div className="andingPage-section2-contact-button">
+        
+
+          <Button variant="text">GET IN TOUCH</Button>
+          
+       
+      </div>
     </div>
   );
 

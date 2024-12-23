@@ -8,10 +8,10 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import Button from "@mui/material/Button";
 import LanguageSwitch from "./LanguageSwich";
 
-const Footer = ({ language }) => {
+const Footer = ({ isEnglish, setIsEnglish }) => {
   return (
     <>
-      {language === "en" ? (
+      {isEnglish === "true" ? (
         <div className="footer-bar">
           <div className="footer-bar-social-medias">
             <LinkedInIcon />
@@ -24,9 +24,9 @@ const Footer = ({ language }) => {
             </Button>
           </div>
           <div className="footer-bar-language">
-            <LanguageSwitch language={language}/>
+            <LanguageSwitch isEnglish={isEnglish} />
           </div>
-          
+
           <div className="footer-bar-copyright">
             © 2024 Zhaoye Zhang. All rights reserved.
           </div>
@@ -39,14 +39,18 @@ const Footer = ({ language }) => {
             <XIcon />
           </div>
           <div className="footer-bar-return-button">
-            <Button variant="text">
+            <Button
+              variant="text"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
               <ArrowUpwardIcon />
             </Button>
           </div>
+
           <div className="footer-bar-language">
-            <LanguageSwitch language={language}/>
+            <LanguageSwitch isEnglish={isEnglish} setIsEnglish={setIsEnglish} />
           </div>
-          
+
           <div className="footer-bar-copyright">
             © 2024 Zhaoye Zhang. All rights reserved.
           </div>

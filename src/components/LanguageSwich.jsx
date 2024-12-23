@@ -5,17 +5,19 @@ import Switch from "@mui/material/Switch";
 
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import { useNavigate } from "react-router-dom";
 
 import enIcon from "../assets/en.svg";
 import cnIcon from "../assets/cn.svg";
 
-const LanguageSwitch = ({ language }) => {
-    console.log(language);
-    
-  const [isEnglish, setIsEnglish] = useState(language === "en" ? true : false);
+const LanguageSwitch = ({ isEnglish , setIsEnglish}) => {
+    const navigate = useNavigate();
+  
   const handleSwitchChange = (event) => {
     setIsEnglish(event.target.checked);
+    localStorage.setItem("isEnglish", event.target.checked)
     console.log("Switch State:", event.target.checked ? "English" : "Chinese");
+    navigate(localStorage.getItem("isEnglish") === "true" ? "/" : "/cn");
   };
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,

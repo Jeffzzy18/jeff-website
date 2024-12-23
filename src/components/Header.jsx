@@ -7,28 +7,17 @@ import { useLocation } from "react-router-dom";
 
 import TranslateIcon from "@mui/icons-material/Translate";
 
-const Header = ({ setLanguage }) => {
+const Header = ({ setIsEnglish, isEnglish }) => {
   const navigate = useNavigate();
-  const location = useLocation();
-  const pathSegments = location.pathname.split("/"); // 分割路径
-  const URL_language = pathSegments[1];
-
-  useEffect(() => {
-    if (URL_language === "cn") {
-      localStorage.setItem("language", "cn");
-      setLanguage("cn");
-    } else {
-      localStorage.setItem("language", "en");
-      setLanguage("en");
-    }
-  }, [URL_language]);
 
   const toggleLanguage = () => {
-    localStorage.getItem("language") === "cn"
-      ? localStorage.setItem("language", "en")
-      : localStorage.setItem("language", "cn");
+    console.log(isEnglish);
+    
+    localStorage.getItem("isEnglish") === "false"
+      ? localStorage.setItem("isEnglish", "true")
+      : localStorage.setItem("isEnglish", "false");
 
-    navigate(localStorage.getItem("language") === "en" ? "/" : "/cn");
+    navigate(localStorage.getItem("isEnglish") === "true" ? "/" : "/cn");
   };
 
   //   useEffect(() => {
@@ -38,11 +27,11 @@ const Header = ({ setLanguage }) => {
   //     // ? localStorage.setItem("language", "cn")
   //     // : localStorage.setItem("language", "en");
   //   }, [language]);
-  console.log(localStorage.getItem("language"));
+  //   console.log(localStorage.getItem("language"));
 
   return (
     <>
-      {localStorage.getItem("language") === "en" ? (
+      {localStorage.getItem("isEnglish") === "true" ? (
         <div className="header-bar">
           <Nav.Link href="/" className="header-bar-button">
             HOME

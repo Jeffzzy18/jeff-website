@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "../App.css";
 
-import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
 const LandingPage = () => {

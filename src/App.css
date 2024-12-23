@@ -36,6 +36,7 @@
   /* Clean default css style */
 
   .header-bar {
+    /* position: fixed; */
       height: 40px;
       border: 1px solid red;
       background-color: pink;
@@ -68,7 +69,8 @@
   }
 
   .landingPage-container {
-      height: 200vh;
+      /* height: 200vh; */
+      overflow-y: hidden;
   }
 
   .landingPage-section {
@@ -83,6 +85,7 @@
   .landingPage-section1-box {
       width: 100%;
       height: 100vh;
+      
       /* color: white; */
       /* background-image: url('./assets/background.jpeg'); */
       background-size: cover;

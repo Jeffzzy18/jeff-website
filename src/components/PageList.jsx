@@ -25,10 +25,10 @@ const PageList = () => {
 
   useEffect(() => {
     if (URL_language === "cn") {
-      localStorage.setItem("isEnglish", false);
+      localStorage.setItem("isEnglish", "false");
       setIsEnglish(false);
     } else {
-      localStorage.setItem("isEnglish", true);
+      localStorage.setItem("isEnglish", "true");
       setIsEnglish(true);
     }
   }, [URL_language]);

@@ -20,18 +20,17 @@ const Header = ({ setIsEnglish, isEnglish }) => {
     navigate(localStorage.getItem("isEnglish") === "true" ? "/" : "/cn");
   };
 
-  //   useEffect(() => {
+    useEffect(() => {
 
-  //     // 同步 localStorage 语言
-  //     // language === "cn"
-  //     // ? localStorage.setItem("language", "cn")
-  //     // : localStorage.setItem("language", "en");
-  //   }, [language]);
+      isEnglish === false
+      ? localStorage.setItem("isEnglish", "false")
+      : localStorage.setItem("isEnglish", "true");
+    }, [isEnglish]);
   //   console.log(localStorage.getItem("language"));
 
   return (
     <>
-      {localStorage.getItem("isEnglish") === "true" ? (
+      {isEnglish === true ? (
         <div className="header-bar">
           <Nav.Link href="/" className="header-bar-button">
             HOME

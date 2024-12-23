@@ -14,12 +14,33 @@ const Footer = ({ isEnglish, setIsEnglish }) => {
       {isEnglish === "true" ? (
         <div className="footer-bar">
           <div className="footer-bar-social-medias">
-            <LinkedInIcon />
-            <GitHubIcon />
-            <XIcon />
+            <a
+              href="https://www.linkedin.com/in/zhaoyezhang18"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <XIcon />
+            </a>
           </div>
           <div className="footer-bar-return-button">
-            <Button variant="text">
+            <Button
+              variant="text"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
               <ArrowUpwardIcon />
             </Button>
           </div>
@@ -34,9 +55,27 @@ const Footer = ({ isEnglish, setIsEnglish }) => {
       ) : (
         <div className="footer-bar">
           <div className="footer-bar-social-medias">
-            <LinkedInIcon />
-            <GitHubIcon />
-            <XIcon />
+            <a
+              href="https://www.linkedin.com/in/zhaoyezhang18"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <XIcon />
+            </a>
           </div>
           <div className="footer-bar-return-button">
             <Button

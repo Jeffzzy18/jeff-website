@@ -17,7 +17,7 @@ import Contact_cn from "./Contact_cn.jsx";
 
 
 const PageList = () => {
-    const [language, setLanguage] = useState("")
+    const [language, setLanguage] = useState("en")
   
   return (
     <>

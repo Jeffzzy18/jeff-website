@@ -14,30 +14,43 @@ const Footer = ({ language }) => {
       {language === "en" ? (
         <div className="footer-bar">
           <div className="footer-bar-social-medias">
-            <>
-              <LinkedInIcon />
-            </>
-            <>
-              <GitHubIcon />
-            </>
-            <>
-              <XIcon />
-            </>
-          </div>
-          <div className="footer-bar-language">
-            <LanguageSwitch />
+            <LinkedInIcon />
+            <GitHubIcon />
+            <XIcon />
           </div>
           <div className="footer-bar-return-button">
             <Button variant="text">
               <ArrowUpwardIcon />
             </Button>
           </div>
+          <div className="footer-bar-language">
+            <LanguageSwitch language={language}/>
+          </div>
+          
           <div className="footer-bar-copyright">
             © 2024 Zhaoye Zhang. All rights reserved.
           </div>
         </div>
       ) : (
-        <div className="footer-bar">脚页</div>
+        <div className="footer-bar">
+          <div className="footer-bar-social-medias">
+            <LinkedInIcon />
+            <GitHubIcon />
+            <XIcon />
+          </div>
+          <div className="footer-bar-return-button">
+            <Button variant="text">
+              <ArrowUpwardIcon />
+            </Button>
+          </div>
+          <div className="footer-bar-language">
+            <LanguageSwitch language={language}/>
+          </div>
+          
+          <div className="footer-bar-copyright">
+            © 2024 Zhaoye Zhang. All rights reserved.
+          </div>
+        </div>
       )}
     </>
   );

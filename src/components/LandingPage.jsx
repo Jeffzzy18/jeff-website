@@ -45,7 +45,7 @@ const LandingPage = () => {
     <div className="landingPage-section2-box">
       <div className="landingPage-section2-story">
         <p>
-          Jeff Zhang is a passionate Master's graduate in Artificial
+          Zhaoye Zhang is a passionate Master's graduate in Artificial
           Intelligence from the University of New South Wales, having graduated
           in September 2024. His interests span AI and full-stack development,
           with a particular focus on frontend design and intelligent algorithm
@@ -80,29 +80,27 @@ const LandingPage = () => {
         </ul>
 
         <p>
-          In addition, Jeff actively engages in data-driven challenge projects
+          In addition, Zhaoye actively engages in data-driven challenge projects
           (like Kaggle), gaining valuable practical experience.
         </p>
         <br />
         <p>
           He believes that technology is not just a tool, but a force for
-          changing the world. Through technological innovation, Jeff aims to
+          changing the world. Through technological innovation, Zhaoye aims to
           explore new possibilities and transform solutions into tangible
           impacts.
         </p>
-
+        <br/>
         <p>
           If his experiences or projects interest you, feel free to reach out
           via email or visit his GitHub for more information!
         </p>
       </div>
 
-      <div className="andingPage-section2-contact-button">
-        
-
-          <Button variant="text">GET IN TOUCH</Button>
-          
-       
+      <div className="landingPage-section2-contact-button">
+        <Button variant="text">
+          <a href="/contact">GET IN TOUCH</a>
+        </Button>
       </div>
     </div>
   );

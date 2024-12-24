@@ -22,7 +22,7 @@ const Footer = ({ isEnglish, setIsEnglish }) => {
               <LinkedInIcon />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/Jeffzzy18"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -63,7 +63,7 @@ const Footer = ({ isEnglish, setIsEnglish }) => {
               <LinkedInIcon />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/Jeffzzy18"
               target="_blank"
               rel="noopener noreferrer"
             >

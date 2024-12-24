@@ -127,8 +127,8 @@
     justify-content: center;
     background-color: grey;
     margin: 0 auto;  */
-    width: 100%;
-    overflow-x: hidden;
+      width: 100%;
+      overflow-x: hidden;
 
   }
 
@@ -146,12 +146,45 @@
       padding-left: 25px;
   }
 
-  .andingPage-section2-contact-button {
+  .landingPage-section2-contact-button {
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 50px auto 0 auto;
   }
+
+  .about {
+      width: 100%;
+  }
+
+  .about-section-text {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+  }
+
+  .about-text {
+      text-align: center;
+      width: 50%;
+      height: auto;
+      line-height: 1.5rem;
+      
+  }
+  .about-text >ul >li {
+    list-style: none;
+  }
+
+
+  .about-section1 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
 
   .footer-bar {
       position: relative;
@@ -165,12 +198,8 @@
       left: 20px;
       top: 50%;
       transform: translateY(-50%);
-      /* 垂直居中 */
-
       display: flex;
-      /* 设置为 flex 布局 */
       gap: 20px;
-      /* 设置子元素之间的间距 */
   }
 
   .footer-bar-return-button {

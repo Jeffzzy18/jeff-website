@@ -1,9 +1,15 @@
 import React from "react";
 import "../App.css";
 import AboutCard from "./AboutCard";
-import about_pic1 from "../assets/about-pic1.png"
-import about_pic2 from "../assets/about-pic2.png"
-import about_pic3 from "../assets/about-pic3.png"
+import about_pic1 from "../assets/about-pic1.png";
+import about_pic2 from "../assets/about-pic2.png";
+import about_pic3 from "../assets/about-pic3.png";
+import about_pic4 from "../assets/about-pic4.png";
+import about_pic5 from "../assets/about-pic5.png";
+import about_pic6 from "../assets/about-pic6.png";
+import about_pic7 from "../assets/about-pic7.png";
+
+
 
 const About = () => {
   const cardDataList = [
@@ -25,6 +31,30 @@ const About = () => {
         "Iguanas are herbivorous lizards that are native to Central and South America.",
       image: about_pic3,
     },
+    {
+      title: "Lizard",
+      description:
+        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica.",
+      image: about_pic4,
+    },
+    {
+      title: "Lizard",
+      description:
+        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica.",
+      image: about_pic5,
+    },
+    {
+      title: "Lizard",
+      description:
+        "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica.",
+      image: about_pic6,
+    },
+    {
+        title: "Lizard",
+        description:
+          "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica.",
+        image: about_pic7,
+      },
   ];
 
   return (
@@ -36,21 +66,23 @@ const About = () => {
           <ul>
             <li>- Master's in AI, University of New South Wales.</li>
             <li>- Fullstack developer with intelligent algorithm expertise.</li>
-            <li>- Creator merging technology and art for impactful solutions.</li>
+            <li>
+              - Creator merging technology and art for impactful solutions.
+            </li>
           </ul>
         </div>
       </div>
 
-      <div className="about-section1"></div>
-      {/* 使用 .map() 遍历数组 */}
-      {cardDataList.map((card, index) => (
-        <AboutCard
-          key={index} // 使用唯一键值，建议用索引或唯一 ID
-          title={card.title}
-          description={card.description}
-          image={card.image}
-        />
-      ))}
+      <div className="about-section1">
+        {cardDataList.map((card, index) => (
+          <AboutCard
+            key={index} // 使用唯一键值，建议用索引或唯一 ID
+            title={card.title}
+            description={card.description}
+            image={card.image}
+          />
+        ))}
+      </div>
     </div>
   );
 };

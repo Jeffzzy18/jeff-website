@@ -7,6 +7,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 
 const AboutCard = ({ title, description, image }) => {
   return (
+    <div className='about-section1-card'>
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
@@ -25,6 +26,7 @@ const AboutCard = ({ title, description, image }) => {
         </CardContent>
       </CardActionArea>
     </Card>
+    </div>
   );
 };
 

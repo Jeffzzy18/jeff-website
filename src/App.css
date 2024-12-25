@@ -171,20 +171,27 @@
       width: 50%;
       height: auto;
       line-height: 1.5rem;
-      
+
   }
-  .about-text >ul >li {
-    list-style: none;
+
+  .about-text>ul>li {
+      list-style: none;
   }
 
 
   .about-section1 {
       width: 100%;
+      /* display: flex; */
+      /* align-items: center;
+      justify-content: center; */
+  }
+
+  .about-section1-card {
+      margin-top: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
   }
-
 
   .footer-bar {
       position: relative;

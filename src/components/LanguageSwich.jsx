@@ -10,14 +10,26 @@ import { useNavigate } from "react-router-dom";
 import enIcon from "../assets/en.svg";
 import cnIcon from "../assets/cn.svg";
 
-const LanguageSwitch = ({ isEnglish , setIsEnglish}) => {
-    const navigate = useNavigate();
-  
+const LanguageSwitch = ({ isEnglish, setIsEnglish }) => {
+  const navigate = useNavigate();
+  const currentPath = window.location.pathname;
+  let newPath;
+
+
   const handleSwitchChange = (event) => {
     setIsEnglish(event.target.checked);
-    localStorage.setItem("isEnglish", event.target.checked)
+    localStorage.setItem("isEnglish", event.target.checked);
     console.log("Switch State:", event.target.checked ? "English" : "Chinese");
-    navigate(localStorage.getItem("isEnglish") === "true" ? "/" : "/cn");
+    // navigate(localStorage.getItem("isEnglish") === "true" ? "/" : "/cn");
+    
+    if (!isEnglish) {
+        newPath = currentPath.startsWith("/cn") ? currentPath.replace(/^\/cn/, "") : currentPath;
+      } else {
+        newPath = currentPath.startsWith("/cn") ? currentPath : `/cn${currentPath}`;
+      }
+      
+      navigate(newPath);
+
   };
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,

@@ -12,12 +12,22 @@ const Header = ({ setIsEnglish, isEnglish }) => {
 
   const toggleLanguage = () => {
     console.log(isEnglish);
+    let newPath
+    const currentPath = window.location.pathname;
+
     
     localStorage.getItem("isEnglish") === "false"
       ? localStorage.setItem("isEnglish", "true")
       : localStorage.setItem("isEnglish", "false");
 
     navigate(localStorage.getItem("isEnglish") === "true" ? "/" : "/cn");
+    if (!isEnglish) {
+        newPath = currentPath.startsWith("/cn") ? currentPath.replace(/^\/cn/, "") : currentPath;
+      } else {
+        newPath = currentPath.startsWith("/cn") ? currentPath : `/cn${currentPath}`;
+      }
+      
+      navigate(newPath);
   };
 
     useEffect(() => {

@@ -80,7 +80,6 @@
       display: flex;
       justify-content: center;
       align-items: top;
-      /* font-size: 2rem; */
       transition: transform 1s, opacity 1s;
   }
 
@@ -171,7 +170,7 @@
       width: 50%;
       height: auto;
       line-height: 1.5rem;
-
+        margin-bottom: 30px;
   }
 
   .about-text>ul>li {
@@ -181,17 +180,36 @@
 
   .about-section1 {
       width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 50px;
+      /* margin-bottom: 20px; */
       /* display: flex; */
       /* align-items: center;
       justify-content: center; */
   }
 
+
   .about-section1-card {
-      margin-top: 40px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: start;
+      gap: 50px;
   }
+
+  .about-section1-pic {
+
+      flex: 1;
+      max-width: 100%;
+  }
+
+
+  .about-section1-text-one {
+    height: 480px;
+  }
+
+
 
   .footer-bar {
       position: relative;

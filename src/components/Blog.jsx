@@ -5,7 +5,9 @@ import "../App.css";
 const Blog = () => {
   return (
     <>
-      <>blog</>
+      <div className="blog-section">
+        <div className="blog-section-text">Coming in the future</div>
+      </div>
     </>
   );
 };

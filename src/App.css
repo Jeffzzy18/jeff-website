@@ -29,7 +29,7 @@
   }
 
   :root {
-      font-size: 18px;
+      font-size: 16px;
       /* 默认根字体大小 */
   }
 
@@ -42,6 +42,7 @@
       background-color: pink;
       display: flex;
       align-items: center;
+      /* z-index: 2; */
   }
 
   .header-bar-button {
@@ -170,7 +171,7 @@
       width: 50%;
       height: auto;
       line-height: 1.5rem;
-        margin-bottom: 30px;
+      margin-bottom: 30px;
   }
 
   .about-text>ul>li {
@@ -183,7 +184,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 50px;
+      /* gap: 100px; */
       /* margin-bottom: 20px; */
       /* display: flex; */
       /* align-items: center;
@@ -195,7 +196,7 @@
       display: flex;
       align-items: center;
       justify-content: start;
-      gap: 50px;
+      /* gap: 100px; */
   }
 
   .about-section1-pic {
@@ -206,11 +207,91 @@
 
 
   .about-section1-text-one {
-    height: 480px;
+      height: 480px;
   }
 
+  .blog-section {
+      height: 100vh;
+      color: rebeccapurple;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .blog-section-text {
+      font-size: 5rem;
+  }
+
+  .contact-section {
+      background-color: #111318;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+  }
+
+  .contact-section-text {
+      padding-top: 40px;
+      /* margin: 0 40px 0 40px; */
+      color: #ffffff;
+      width: 100%;
+      text-align: center;
 
 
+  }
+
+  .contact-section-one {
+      width: 100%;
+
+  }
+
+  .contact-section-two {
+      font-size: 3rem;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  .contact-section-three {
+      color: #aaafc1;
+      margin-top: 10px;
+  }
+
+.contact-section-black {
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+.contact-section-grey {
+    font-size: 1rem;
+    color: #aaafc1;
+    margin-top: 10px;
+}
+
+  .contact-section-icon {
+    margin-top: 20px;
+  }
+
+  .contact-section-icon ul {
+    display: flex; /* 让 ul 水平排列 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-section-icon ul li {
+    display: grid; /* 让 li 本身成为 Grid 容器 */
+    place-items: center; /* 上下左右居中 */
+    width: 40px; /* 固定宽度 */
+    height: 40px; /* 固定高度 */
+    margin:20px;
+    background-color: #f0f0f0; /* 添加背景 */
+    border-radius: 5px; /* 可选 */
+    
+  }
   .footer-bar {
       position: relative;
       width: 100%;

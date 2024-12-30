@@ -5,7 +5,9 @@ import "../App.css";
 const Blog_cn = () => {
   return (
     <>
-      <>blog_cn</>
+      <div className="blog-section">
+        <div className="blog-section-text">即将到来</div>
+      </div>
     </>
   );
 };

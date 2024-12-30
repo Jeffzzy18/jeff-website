@@ -16,11 +16,15 @@ const AboutCard = ({ title, description, image }) => {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "flex-start",
-            gap:'40px',
-            border:"0px",   
+            gap: "100px",
+            minHeight: "600px",
+
+            // marginBottom:"20px"
+            // border: "0px",
           }}
         >
-          <CardActionArea sx={{width:"60%", marginLeft:"40px"}}>
+          <CardActionArea sx={{ width: "60%", marginLeft: "40px" }}>
+            {/* 图片的css */}
             <CardMedia
               component="img"
               image={image}
@@ -28,13 +32,34 @@ const AboutCard = ({ title, description, image }) => {
               sx={{
                 aspectRatio: "16/9", // 固定为 16:9 的长宽比例
                 objectFit: "cover", // 根据需要设置图片的填充方式
-                width:"100%",
-                
+                width: "100%",
+                minWidth: "150px",
               }}
             />
-            <div style={{ height: "100px", paddingTop: "20px",  width:"50%",fontSize:"1.2rem"}}>{title}</div>
+            {/* title的css */}
+            <div
+              style={{
+                // height: "100px",
+                paddingTop: "20px",
+                width: "70%",
+                fontSize: "2rem",
+                fontWeight: "bold",
+                height: "100%",
+              }}
+            >
+              {title}
+            </div>
           </CardActionArea>
-          <div style={{ width:"50%", color:"red", whiteSpace:"pre-wrap",  marginRight:"40px"}}>{description}</div>
+          <div
+            style={{
+              width: "50%",
+              //   color: "red",
+              whiteSpace: "pre-wrap",
+              marginRight: "40px",
+            }}
+          >
+            {description}
+          </div>
         </Card>
       </div>
     </>

@@ -38,15 +38,15 @@
   .header-bar {
       /* position: fixed; */
       height: 40px;
-      border: 1px solid red;
-      background-color: pink;
+
+      background-color: #fff;
       display: flex;
       align-items: center;
       /* z-index: 2; */
   }
 
   .header-bar-button {
-      color: green;
+      color: #002766;
       font-size: 1.5rem;
       margin: 0 20px 0 20px;
   }
@@ -97,7 +97,7 @@
       background-repeat: no-repeat;
       /* 防止图片重复 */
       justify-content: space-between;
-      background-color: grey;
+      background-color: #fff;
       position: relative;
   }
 
@@ -107,7 +107,7 @@
       font-weight: 200;
       top: 35vh;
       left: 80px;
-
+      color: #003a8c
   }
 
   .landingPage-section1-position {
@@ -116,17 +116,11 @@
       font-weight: 100;
       top: 45vh;
       left: 80px;
-      /* margin-top: 200px; */
+      color: #0050b3
+          /* margin-top: 200px; */
   }
 
   .landingPage-section2-box {
-      /* display: flex;
-    width: 60%; 
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: grey;
-    margin: 0 auto;  */
       width: 100%;
       overflow-x: hidden;
 
@@ -137,8 +131,9 @@
       width: 55%;
       align-items: center;
       justify-content: center;
-      background-color: grey;
+      /* background-color: ; */
       margin: 10px auto 0 auto;
+      color: #002766;
 
   }
 
@@ -156,6 +151,118 @@
   .about {
       width: 100%;
   }
+
+  .about-section1 {
+      margin-left: 40px;
+      margin-right: 40px;
+  }
+
+  .about-one-section {
+      height: 100vh;
+      /* background-color: pink; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .about-section1-card-description-section {
+      transition: transform 1s, opacity 1s;
+  }
+
+  .about-section1-card-description-text {
+      white-space: pre-wrap;
+      margin-left: 20px;
+
+  }
+
+  .about-section1-pic {
+
+      flex: 1;
+      max-width: 100%;
+  }
+
+  /* 卡片整体 */
+  .about-section1-card {
+      display: flex;
+      /* 水平排列 */
+      align-items: flex-start;
+      /* 垂直顶部对齐 */
+      /* margin-bottom: 20px; */
+      /* 卡片间距 */
+  }
+
+  /* 图片样式 */
+  .about-section1-card-image {
+      /* width: 60%; */
+      /* 图片宽度 */
+      height: auto;
+      /* 保持比例 */
+      margin-right: 20px;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      width: 100%;
+
+      /* 图片与描述的间距 */
+  }
+
+  .about-section1-card-title {
+    margin-top: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      width: 80%;
+  }
+
+  /* 描述样式 */
+  .test-section1-card-description {
+      flex: 1;
+  }
+
+  /* 图片向上出现 */
+  /* .test-section1-card-description-enter-up {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 0.1s ease, opacity 0.5s ease;
+  } */
+
+  /* 图片向上消失 */
+  .about-section1-card-description-exit-up {
+      opacity: 0;
+      transform: translateY(-30vh);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  /* 图片向下出现 */
+  /* .test-section1-card-description-enter-down {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+  } */
+
+  /* 图片向下消失 */
+  .about-section1-card-description-exit-down {
+      opacity: 0;
+      transform: translateY(30vh);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+
+
+
+
+
+  /* .about-section1-card-description-section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: top;
+      transition: transform 1s, opacity 1s;
+  } */
+
+  .about-section1-card-description-hidden {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+
 
   .about-section-text {
       margin-top: 80px;
@@ -179,17 +286,13 @@
   }
 
 
-  .about-section1 {
-      width: 100%;
+  /* .about-section1 { */
+      /* width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      /* gap: 100px; */
-      /* margin-bottom: 20px; */
-      /* display: flex; */
-      /* align-items: center;
-      justify-content: center; */
-  }
+    
+  } */
 
 
   .about-section1-card {
@@ -211,7 +314,7 @@
   }
 
   .blog-section {
-      height: 100vh;
+      height: 120vh;
       color: rebeccapurple;
       display: flex;
       align-items: center;
@@ -259,44 +362,53 @@
       margin-top: 10px;
   }
 
-.contact-section-black {
-    font-size: 1.8rem;
-    margin-top: 20px;
-}
-.contact-section-grey {
-    font-size: 1rem;
-    color: #aaafc1;
-    margin-top: 10px;
-}
+  .contact-section-black {
+      font-size: 1.8rem;
+      margin-top: 20px;
+  }
+
+  .contact-section-grey {
+      font-size: 1rem;
+      color: #aaafc1;
+      margin-top: 10px;
+  }
 
   .contact-section-icon {
-    margin-top: 20px;
+      margin-top: 20px;
   }
 
   .contact-section-icon ul {
-    display: flex; /* 让 ul 水平排列 */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
+      display: flex;
+      /* 让 ul 水平排列 */
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
   }
-  
+
   .contact-section-icon ul li {
-    display: grid; /* 让 li 本身成为 Grid 容器 */
-    place-items: center; /* 上下左右居中 */
-    width: 40px; /* 固定宽度 */
-    height: 40px; /* 固定高度 */
-    margin:20px;
-    background-color: #f0f0f0; /* 添加背景 */
-    border-radius: 5px; /* 可选 */
-    
+      display: grid;
+      /* 让 li 本身成为 Grid 容器 */
+      place-items: center;
+      /* 上下左右居中 */
+      width: 40px;
+      /* 固定宽度 */
+      height: 40px;
+      /* 固定高度 */
+      margin: 20px;
+      background-color: #f0f0f0;
+      /* 添加背景 */
+      border-radius: 5px;
+      /* 可选 */
+
   }
+
   .footer-bar {
       position: relative;
       width: 100%;
       height: 80px;
-      background-color: pink;
+      background-color: #fff;
   }
 
   .footer-bar-social-medias {

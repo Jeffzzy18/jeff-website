@@ -90,7 +90,7 @@ const LandingPage = () => {
           explore new possibilities and transform solutions into tangible
           impacts.
         </p>
-        <br/>
+        <br />
         <p>
           If his experiences or projects interest you, feel free to reach out
           via email or visit his GitHub for more information!
@@ -99,13 +99,16 @@ const LandingPage = () => {
 
       <div className="landingPage-section2-contact-button">
         <Button variant="text">
-          <a href="/contact">GET IN TOUCH</a>
+          <a href="/contact" style={{ color: "#002766" }}>
+            GET IN TOUCH
+          </a>
         </Button>
       </div>
     </div>
   );
 
   const sections = [section1, section2];
+  //   console.log(sections);
 
   return (
     <>

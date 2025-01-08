@@ -48,15 +48,19 @@ const Header = ({ setIsEnglish, isEnglish }) => {
           <Nav.Link href="/about" className="header-bar-button">
             ABOUT
           </Nav.Link>
-          <Nav.Link href="/blog" className="header-bar-button">
+          {/* <Nav.Link href="/blog" className="header-bar-button">
             BLOG
-          </Nav.Link>
+          </Nav.Link> */}
           <Nav.Link href="/contact" className="header-bar-button">
             CONTACT
           </Nav.Link>
+          {/* <Nav.Link href="/test" className="header-bar-button">
+            TEST
+          </Nav.Link> */}
           <Nav.Link onClick={toggleLanguage} className="header-bar-translation">
             <TranslateIcon />
           </Nav.Link>
+          
         </div>
       ) : (
         <div className="header-bar">
@@ -66,9 +70,9 @@ const Header = ({ setIsEnglish, isEnglish }) => {
           <Nav.Link href="/cn/about" className="header-bar-button">
             关于
           </Nav.Link>
-          <Nav.Link href="/cn/blog" className="header-bar-button">
+          {/* <Nav.Link href="/cn/blog" className="header-bar-button">
             博客
-          </Nav.Link>
+          </Nav.Link> */}
           <Nav.Link href="/cn/contact" className="header-bar-button">
             沟通
           </Nav.Link>

@@ -15,6 +15,8 @@ import Blog from "./Blog.jsx";
 import Blog_cn from "./Blog_cn.jsx";
 import Contact from "./Contact.jsx";
 import Contact_cn from "./Contact_cn.jsx";
+import Test from './Test.jsx'
+import Test1 from './Test1.jsx'
 
 const PageList = () => {
 //   const [language, setLanguage] = useState("en");
@@ -45,6 +47,7 @@ const PageList = () => {
         <Route path="cn/blog" element={<Blog_cn />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="cn/contact" element={<Contact_cn />} />
+        <Route path="/test" element={<Test/>}/>
       </Routes>
       <Footer setIsEnglish={setIsEnglish} isEnglish = {isEnglish}/>
     </>

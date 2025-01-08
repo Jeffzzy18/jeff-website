@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../App.css";
+import AboutCard from "./AboutCard";
 import about_pic1 from "../assets/about-pic1.png";
 import about_pic2 from "../assets/about-pic2.png";
 import about_pic3 from "../assets/about-pic3.png";
@@ -8,7 +9,7 @@ import about_pic5 from "../assets/about-pic5.png";
 import about_pic6 from "../assets/about-pic6.png";
 import about_pic7 from "../assets/about-pic7.png";
 
-const About = () => {
+const Test = () => {
   const cardDataList = [
     {
       title: "Advanced Image Segmentation for Smart City Applications",
@@ -139,41 +140,59 @@ const About = () => {
         if (scrollDirection === "up") {
           if (!entry.isIntersecting) {
             if (isAboveViewport) {
+              // 上面的图片，向上消失
               entry.target.classList.add(
-                "about-section1-card-description-exit-up"
+                "test-section1-card-description-exit-up"
               );
-            
-            } else if (isBelowViewport) {
-             
               entry.target.classList.remove(
-                "about-section1-card-description-exit-up"
+                "test-section1-card-description-enter-up"
+              );
+            } else if (isBelowViewport) {
+              // 下面的图片，向上出现
+              entry.target.classList.add(
+                "test-section1-card-description-enter-up"
+              );
+              entry.target.classList.remove(
+                "test-section1-card-description-exit-up"
               );
             }
           }
         } else if (scrollDirection === "down") {
           if (!entry.isIntersecting) {
             if (isAboveViewport) {
-             
+              // 上面的图片，向下出现
+              entry.target.classList.add(
+                "test-section1-card-description-enter-down"
+              );
               entry.target.classList.remove(
-                "about-section1-card-description-exit-down"
+                "test-section1-card-description-exit-down"
               );
             } else if (isBelowViewport) {
+              // 下面的图片，向下消失
               entry.target.classList.add(
-                "about-section1-card-description-exit-down"
+                "test-section1-card-description-exit-down"
               );
-           
+              entry.target.classList.remove(
+                "test-section1-card-description-enter-down"
+              );
             }
           }
         }
 
+        // 图片进入视口时，移除所有隐藏类
         if (entry.isIntersecting) {
           entry.target.classList.remove(
-            "about-section1-card-description-exit-up"
+            "test-section1-card-description-exit-up"
           );
           entry.target.classList.remove(
-            "about-section1-card-description-exit-down"
+            "test-section1-card-description-exit-down"
           );
-       
+          entry.target.classList.remove(
+            "test-section1-card-description-enter-up"
+          );
+          entry.target.classList.remove(
+            "test-section1-card-description-enter-down"
+          );
         }
       });
     }, options);
@@ -193,14 +212,14 @@ const About = () => {
   cardDataList.forEach((value, index) => {
     sections.push(
       <div style={{ minWidth: "150px", width: "50vw" }}>
-        <div className="about-section1-card">
+        <div className="test-section1-card">
           <img
             src={value.image}
             alt={value.title}
-            className="about-section1-card-image"
+            className="test-section1-card-image"
           />
         </div>
-        <div className="about-section1-card-title">{value.title}</div>
+        <div className="test-section1-card-title">{value.title}</div>
       </div>
     );
   });
@@ -221,20 +240,20 @@ const About = () => {
         </div>
       </div>
 
-      <div className="about-section1">
+      <div className="test-section1">
         {sections.map((section, i) => (
           <div
-            className="about-one-section"
+            className="test-one-section"
             ref={(el) => (visibleTopsSectionsRef.current[i] = el)}
           >
             <section
               key={i}
               ref={(el) => (sectionsRef.current[i] = el)}
-              className="about-section1-card-description-section"
+              className="test-section1-card-description-section"
             >
               <div>{section}</div>
             </section>
-            <div className="about-section1-card-description-text">
+            <div className="test-section1-card-description-text" >
               {cardDataList[i].description}
             </div>
           </div>
@@ -243,4 +262,4 @@ const About = () => {
     </div>
   );
 };
-export default About;
+export default Test;

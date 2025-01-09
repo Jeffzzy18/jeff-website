@@ -78,7 +78,7 @@ const LandingPage = () => {
             user experience.
           </li>
         </ul>
-
+        <br />
         <p>
           In addition, Zhaoye actively engages in data-driven challenge projects
           (like Kaggle), gaining valuable practical experience.

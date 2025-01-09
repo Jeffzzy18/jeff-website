@@ -192,7 +192,7 @@ const About = () => {
   const sections = [];
   cardDataList.forEach((value, index) => {
     sections.push(
-      <div style={{ minWidth: "150px", width: "50vw" }}>
+      <div className="about-section1-card-total">
         <div className="about-section1-card">
           <img
             src={value.image}

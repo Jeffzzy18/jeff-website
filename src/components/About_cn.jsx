@@ -186,7 +186,7 @@ const About_cn = () => {
   const sections = [];
   cardDataList.forEach((value, index) => {
     sections.push(
-      <div style={{ minWidth: "150px", width: "50vw" }}>
+      <div className="about-section1-card-total">
         <div className="about-section1-card">
           <img
             src={value.image}
@@ -203,11 +203,11 @@ const About_cn = () => {
     <div className="about">
       <div className="about-section-text">
         <div className="about-text">
-          环游世界，通过创新技术和创造性解决方案启发并赋能人们。
+          环游世界，通过创新技术和创造性解决方案启发并激励人们的能力。
           <ul>
             <li>- 人工智能硕士，毕业于新南威尔士大学。</li>
             <li>- 精通智能算法的全栈开发。</li>
-            <li>- 将技术与艺术融合，创造有影响力的解决方案的创作者。</li>
+            <li>- 融合技术与艺术的创造者，提供有影响力的解决方案。</li>
           </ul>
         </div>
       </div>

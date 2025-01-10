@@ -258,11 +258,12 @@
 
 
   .about-section-text {
-      margin-top: 80px;
+      /* margin-top: 80px; */
       display: flex;
       justify-content: center;
       align-items: center;
       /* width: 100%; */
+      height: 100vh;
 
   }
 
@@ -518,7 +519,7 @@
           flex-direction: column-reverse;
           padding-top: 0;
           height: 120vh;
-          min-height: 1000px;
+          min-height: 1400px;
       }
 
       .about-section1 {

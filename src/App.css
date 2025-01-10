@@ -1,0 +1,546 @@
+  /* Clean default css style */
+  * {
+      font-size: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  html,
+  body {
+      min-height: 100vh;
+      margin: 0;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+  }
+
+  a {
+      color: #000;
+      text-decoration: none;
+  }
+
+  hr {
+      margin: 0px;
+  }
+
+  .zero-margin-hr {
+      margin: 0px;
+  }
+
+  :root {
+      font-size: 16px;
+      /* 默认根字体大小 */
+  }
+
+  /* Clean default css style */
+
+  .header-bar {
+      /* position: fixed; */
+      height: 40px;
+      margin-left: 60px;
+      margin-right: 60px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      /* z-index: 2; */
+  }
+
+  .header-bar-button {
+      color: #002766;
+      font-size: 1.5rem;
+      margin: 0 20px 0 20px;
+  }
+
+  .header-bar-translation {
+      display: flex;
+      margin-left: auto;
+      margin-right: 15px;
+
+  }
+
+
+
+  .landingPage-hidden {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+
+  .landingPage-inner-div {
+      width: 100%;
+  }
+
+  .landingPage-container {
+      /* height: 200vh; */
+      overflow-y: hidden;
+      overflow-x: hidden;
+      /* width: 100%; */
+  }
+
+  .landingPage-section {
+      /* height: 100vh; */
+      display: flex;
+      justify-content: center;
+      align-items: top;
+      transition: transform 1s, opacity 1s;
+  }
+
+  .landingPage-section1-box {
+      width: 100%;
+      height: 100vh;
+
+      /* color: white; */
+      /* background-image: url('./assets/background.jpeg'); */
+      background-size: cover;
+      /* 图片填满容器 */
+      background-position: -0px center;
+      /* 图片居中 */
+      background-repeat: no-repeat;
+      /* 防止图片重复 */
+      justify-content: space-between;
+      background-color: #fff;
+      position: relative;
+  }
+
+  .landingPage-section1-name {
+      position: absolute;
+      font-size: 4rem;
+      font-weight: 200;
+      top: 35vh;
+      left: 80px;
+      color: #003a8c
+  }
+
+  .landingPage-section1-position {
+      position: relative;
+      font-size: 1.8rem;
+      font-weight: 100;
+      top: 45vh;
+      left: 80px;
+      color: #0050b3
+          /* margin-top: 200px; */
+  }
+
+  .landingPage-section2-box {
+      width: 100%;
+      overflow-x: hidden;
+      margin-bottom: 200px;
+
+  }
+
+  .landingPage-section2-story {
+      line-height: 1.4;
+      width: 55%;
+      align-items: center;
+      justify-content: center;
+      /* background-color: ; */
+      margin: 0 auto 0 auto;
+      color: #002766;
+
+  }
+
+  .landingPage-section2-story ul {
+      padding-left: 25px;
+  }
+
+  .landingPage-section2-contact-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 50px auto 0 auto;
+  }
+
+  .about {
+      width: 100%;
+  }
+
+  .about-section1 {
+      margin-left: 80px;
+      margin-right: 80px;
+      /* border: 1px springgreen solid; */
+  }
+
+  .about-one-section {
+      height: 100vh;
+      /* background-color: pink; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      padding-top: 200px;
+  }
+
+  .about-section1-card-description-section {
+      transition: transform 1s, opacity 1s;
+  }
+
+  .about-section1-card-description-text {
+      white-space: pre-wrap;
+      margin-left: 40px;
+
+  }
+
+  .about-section1-pic {
+
+      flex: 1;
+      max-width: 100%;
+  }
+
+  /* 卡片整体 */
+  .about-section1-card {
+      display: flex;
+      /* 水平排列 */
+      align-items: flex-start;
+      /* 垂直顶部对齐 */
+      /* margin-bottom: 20px; */
+      /* 卡片间距 */
+  }
+
+  /* 图片样式 */
+  .about-section1-card-image {
+      /* width: 60%; */
+      /* 图片宽度 */
+      height: auto;
+      /* 保持比例 */
+      margin-right: 20px;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      width: 100%;
+
+      /* 图片与描述的间距 */
+  }
+
+  .about-section1-card-title {
+      margin-top: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      width: 80%;
+  }
+
+  /* 描述样式 */
+  .test-section1-card-description {
+      flex: 1;
+  }
+
+  /* 图片向上出现 */
+  /* .test-section1-card-description-enter-up {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 0.1s ease, opacity 0.5s ease;
+  } */
+
+  /* 图片向上消失 */
+  .about-section1-card-description-exit-up {
+      opacity: 0;
+      transform: translateY(-30vh);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  /* 图片向下出现 */
+  /* .test-section1-card-description-enter-down {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+  } */
+
+  /* 图片向下消失 */
+  .about-section1-card-description-exit-down {
+      opacity: 0;
+      transform: translateY(30vh);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .about-section1-card-description-hidden {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+
+
+  .about-section-text {
+      /* margin-top: 80px; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* width: 100%; */
+      height: 100vh;
+
+  }
+
+  .about-text {
+      text-align: center;
+      width: 50%;
+      height: auto;
+      line-height: 1.7rem;
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+  }
+
+  .about-text>ul {
+      list-style: none;
+      margin-top: 40px;
+      font-size: 1.2rem;
+  }
+
+
+  /* .about-section1 { */
+  /* width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    
+  } */
+  .about-section1-card-total {
+    min-width: 150px;
+    width: 50vw;
+  }
+
+  .about-section1-card {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      /* gap: 100px; */
+  }
+
+  .about-section1-pic {
+
+      flex: 1;
+      max-width: 100%;
+  }
+
+
+  .about-section1-text-one {
+      height: 480px;
+  }
+
+  .blog-section {
+      height: 120vh;
+      color: rebeccapurple;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .blog-section-text {
+      font-size: 5rem;
+  }
+
+  .contact-section {
+      background-color: #111318;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+  }
+
+  .contact-section-text {
+      padding-top: 40px;
+      /* margin: 0 40px 0 40px; */
+      color: #ffffff;
+      width: 100%;
+      text-align: center;
+
+
+  }
+
+  .contact-section-one {
+      width: 100%;
+
+  }
+
+  .contact-section-two {
+      font-size: 3rem;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  .contact-section-three {
+      color: #aaafc1;
+      margin-top: 10px;
+  }
+
+  .contact-section-black {
+      font-size: 1.8rem;
+      margin-top: 20px;
+  }
+
+  .contact-section-grey {
+      font-size: 1rem;
+      color: #aaafc1;
+      margin-top: 10px;
+  }
+
+  .contact-section-icon {
+      margin-top: 20px;
+  }
+
+  .contact-section-icon ul {
+      display: flex;
+      /* 让 ul 水平排列 */
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .contact-section-icon ul li {
+      display: grid;
+      /* 让 li 本身成为 Grid 容器 */
+      place-items: center;
+      /* 上下左右居中 */
+      width: 40px;
+      /* 固定宽度 */
+      height: 40px;
+      /* 固定高度 */
+      margin: 20px;
+      background-color: #f0f0f0;
+      /* 添加背景 */
+      border-radius: 5px;
+      /* 可选 */
+
+  }
+
+  .footer-bar {
+      position: relative;
+      margin-left: 60px;
+      margin-right: 60px;
+      width: 100%;
+      height: 80px;
+      background-color: #fff;
+  }
+
+  .footer-bar-social-medias {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      gap: 20px;
+  }
+
+  .footer-bar-return-button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(calc(-50% - 60px), -50%);
+  }
+
+  .footer-bar-copyright {
+      position: absolute;
+      right: 140px;
+      bottom: 10px;
+      font-size: 0.8rem;
+  }
+
+  .footer-bar-language {
+      position: absolute;
+      width: 160px;
+      right: 110px;
+      top: 10px;
+  }
+
+  @media (max-width: 700px) {
+      .header-bar {
+          margin-left: 20px;
+          margin-right: 20px;
+      }
+
+      .header-bar-button {
+          font-size: 1.2rem;
+          margin: 0 10px 0 10px;
+      }
+
+      .landingPage-section1-name {
+          /* position: absolute; */
+          font-size: 3rem;
+          /* font-weight: 200; */
+          /* top: 35vh; */
+          left: 30px;
+
+      }
+
+      .landingPage-section1-position {
+          font-size: 1.5rem;
+          top: 45vh;
+          left: 30px;
+          color: #0050b3;
+          width: calc(80vw);
+      }
+
+      .landingPage-section2-story {
+          line-height: 1.4;
+          width: 80%;
+      }
+
+      .footer-bar {
+          margin-left: 20px;
+      }
+
+      .footer-bar-copyright {
+          right: 55px;
+          bottom: 10px;
+          font-size: 0.8rem;
+      }
+
+      .footer-bar-language {
+          width: 160px;
+          right: 25px;
+          top: 10px;
+      }
+
+      .footer-bar-return-button {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(calc(-50% - 15px), -50%);
+      }
+
+      .contact-section-text {
+          /* padding-top: 20px; */
+          color: #ffffff;
+          width: 80%;
+          text-align: center;
+
+
+      }
+
+      .about-text {
+          width: 70%;
+          margin-bottom: 30px;
+          font-size: 1.5rem;
+      }
+
+      .about-one-section {
+          /* background-color: pink; */
+          flex-direction: column-reverse;
+          padding-top: 0;
+          height: 120vh;
+          min-height: 1400px;
+      }
+
+      .about-section1 {
+          margin-left: 35px;
+          margin-right: 35px;
+          /* border: 1px springgreen solid; */
+      }
+
+      .about-section1-card-description-text {
+          margin-left: 0;
+          /* width: 100vw; */
+      }
+
+      .about-section1-card-title {
+          margin-top: 40px;
+          font-size: 1.5rem;
+          width: 100%;
+      }
+      .about-section1-card-total {
+        /* min-width: 150px; */
+        width: 80vw;
+      }
+
+  }

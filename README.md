@@ -1,2 +1,0 @@
-# jeff-website
-personal website

@@ -38,7 +38,7 @@ const LandingPage = () => {
       <div className="landingPage-section1-position">
         Artificial Intelligence Engineer & Full Stack Developer
       </div>
-      <div className="landingPage-section1-avatar">123</div>
+      <div className="landingPage-section1-avatar"></div>
     </div>
   );
   const section2 = (

@@ -39,6 +39,7 @@ const LandingPage_cn = () => {
       <div className="landingPage-section1-position">
         人工智能 & 全栈开发工程师
       </div>
+      <div className="landingPage-section1-avatar"></div>
     </div>
   );
   const section2 = (

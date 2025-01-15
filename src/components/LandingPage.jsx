@@ -11,7 +11,6 @@ const LandingPage = () => {
       threshold: 0.5, // 50% 可见时触发
     };
 
-    // 初始化 IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -39,6 +38,7 @@ const LandingPage = () => {
       <div className="landingPage-section1-position">
         Artificial Intelligence Engineer & Full Stack Developer
       </div>
+      <div className="landingPage-section1-avatar">123</div>
     </div>
   );
   const section2 = (
@@ -108,7 +108,6 @@ const LandingPage = () => {
   );
 
   const sections = [section1, section2];
-  //   console.log(sections);
 
   return (
     <>

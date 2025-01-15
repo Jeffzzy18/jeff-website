@@ -121,6 +121,27 @@
           /* margin-top: 200px; */
   }
 
+  .landingPage-section1-avatar {
+      position: absolute;
+      height: 600px;
+      width: 600px;
+      border-radius: 300px;
+      top: 20vh;
+      right: 60px;
+      /* background-color: pink; */
+      background-image: url("/src/assets/background.jpeg");
+      background-size: cover;
+      /* 保持图片比例并填满圆 */
+      background-position: center -180px;
+      /* 确保图片居中显示 */
+      overflow: hidden;
+      /* 防止图片超出圆形范围 */
+      transition: transform 0.3s ease;
+      /* 添加放大过渡效果 */
+      background-size: 130%;
+  }
+
+
   .landingPage-section2-box {
       width: 100%;
       overflow-x: hidden;
@@ -291,8 +312,8 @@
     
   } */
   .about-section1-card-total {
-    min-width: 150px;
-    width: 50vw;
+      min-width: 150px;
+      width: 50vw;
   }
 
   .about-section1-card {
@@ -443,6 +464,35 @@
       top: 10px;
   }
 
+  @media (max-height: 700px) {
+      .landingPage-section1-position {
+          /* font-size: 1.5rem; */
+          top: 55vh;
+      }
+  }
+
+  @media (max-width: 1400px) {
+      .landingPage-section1-name {
+          top: 10vh;
+
+      }
+
+      .landingPage-section1-position {
+          top: 20vh;
+      }
+
+      .landingPage-section1-avatar {
+          top: 35vh;
+          left: 85px;
+          height: 500px;
+          width: 500px;
+          border-radius: 250px;
+      }
+  }
+
+
+
+
   @media (max-width: 700px) {
       .header-bar {
           margin-left: 20px;
@@ -455,21 +505,27 @@
       }
 
       .landingPage-section1-name {
-          /* position: absolute; */
           font-size: 3rem;
-          /* font-weight: 200; */
-          /* top: 35vh; */
           left: 30px;
 
       }
 
       .landingPage-section1-position {
           font-size: 1.5rem;
-          top: 45vh;
+          /* top: 45vh; */
           left: 30px;
           color: #0050b3;
           width: calc(80vw);
       }
+
+      .landingPage-section1-avatar {
+          /* top: 50vh; */
+          height: 80vw;
+          left: 30px;
+          width: 80vw;
+          border-radius: 40vw;
+      }
+
 
       .landingPage-section2-story {
           line-height: 1.4;
@@ -538,9 +594,10 @@
           font-size: 1.5rem;
           width: 100%;
       }
+
       .about-section1-card-total {
-        /* min-width: 150px; */
-        width: 80vw;
+          /* min-width: 150px; */
+          width: 80vw;
       }
 
   }

@@ -42,7 +42,7 @@ const About = () => {
         "- Created dynamic channel views supporting message sending, editing, reactions, and pinning, with seamless real-time updates through WebSocket integration.\n\n" +
         "- Implemented advanced features including infinite scroll for message feeds, push notifications, and offline access using local storage caching.\n\n" +
         "- Integrated APIs for backend interaction and ensured robust error handling with user-friendly feedback mechanisms.\n\n" +
-        "- wOptimized the application's usability and performance, enhancing the overall user experience in a collaborative messaging platform.\n\n",
+        "- Optimized the application's usability and performance, enhancing the overall user experience in a collaborative messaging platform.\n\n",
       image: about_pic4,
     },
     {

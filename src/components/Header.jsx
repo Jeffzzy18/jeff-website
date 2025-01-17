@@ -54,9 +54,9 @@ const Header = ({ setIsEnglish, isEnglish }) => {
           <Nav.Link href="/contact" className="header-bar-button">
             CONTACT
           </Nav.Link>
-          {/* <Nav.Link href="/test" className="header-bar-button">
+          <Nav.Link href="/test" className="header-bar-button">
             TEST
-          </Nav.Link> */}
+          </Nav.Link>
           <Nav.Link onClick={toggleLanguage} className="header-bar-translation">
             <TranslateIcon />
           </Nav.Link>

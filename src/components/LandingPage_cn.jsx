@@ -11,7 +11,6 @@ const LandingPage_cn = () => {
       threshold: 0.5, // 50% 可见时触发
     };
 
-    // 初始化 IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

@@ -142,9 +142,7 @@ const About = () => {
               entry.target.classList.add(
                 "about-section1-card-description-exit-up"
               );
-            
             } else if (isBelowViewport) {
-             
               entry.target.classList.remove(
                 "about-section1-card-description-exit-up"
               );
@@ -153,7 +151,6 @@ const About = () => {
         } else if (scrollDirection === "down") {
           if (!entry.isIntersecting) {
             if (isAboveViewport) {
-             
               entry.target.classList.remove(
                 "about-section1-card-description-exit-down"
               );
@@ -161,7 +158,6 @@ const About = () => {
               entry.target.classList.add(
                 "about-section1-card-description-exit-down"
               );
-           
             }
           }
         }
@@ -173,7 +169,6 @@ const About = () => {
           entry.target.classList.remove(
             "about-section1-card-description-exit-down"
           );
-       
         }
       });
     }, options);
@@ -224,11 +219,11 @@ const About = () => {
       <div className="about-section1">
         {sections.map((section, i) => (
           <div
+            key={i}
             className="about-one-section"
             ref={(el) => (visibleTopsSectionsRef.current[i] = el)}
           >
             <section
-              key={i}
               ref={(el) => (sectionsRef.current[i] = el)}
               className="about-section1-card-description-section"
             >

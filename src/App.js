@@ -5,7 +5,7 @@ import PageList from "./components/PageList";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="jeff-website">
           <PageList />
       </Router>
     </>

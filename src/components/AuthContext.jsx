@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { myAuth } from "./FirebaseConfig";
+// import { myAuth } from "./FirebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 // import { initializeApp } from "firebase/app";
 
@@ -13,8 +13,8 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscrible = onAuthStateChanged(myAuth, initializeUser);
-    return unsubscrible;
+    // const unsubscrible = onAuthStateChanged(myAuth, initializeUser);
+    // return unsubscrible;
   }, []);
   const initializeUser = async (user) => {
     if (user) {

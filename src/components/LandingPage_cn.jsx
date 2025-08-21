@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import "../App.css";
+import React, { useEffect, useRef } from 'react';
+import '../App.css';
+import { NavLink } from 'react-router-dom';
 
-import Button from "@mui/material/Button";
+import Button from '@mui/material/Button';
 
 const LandingPage_cn = () => {
   const sectionsRef = useRef([]); // 存储所有 sections 的引用
@@ -14,9 +15,9 @@ const LandingPage_cn = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.remove("landingPage-hidden"); // 可见时移除类名
+          entry.target.classList.remove('landingPage-hidden'); // 可见时移除类名
         } else {
-          entry.target.classList.add("landingPage-hidden"); // 不可见时添加类名
+          entry.target.classList.add('landingPage-hidden'); // 不可见时添加类名
         }
       });
     }, options);
@@ -33,17 +34,17 @@ const LandingPage_cn = () => {
   }, []);
 
   const section1 = (
-    <div className="landingPage-section1-box">
-      <div className="landingPage-section1-name">张兆烨</div>
-      <div className="landingPage-section1-position">
+    <div className='landingPage-section1-box'>
+      <div className='landingPage-section1-name'>张兆烨</div>
+      <div className='landingPage-section1-position'>
         人工智能 & 全栈开发工程师
       </div>
-      <div className="landingPage-section1-avatar"></div>
+      <div className='landingPage-section1-avatar'></div>
     </div>
   );
   const section2 = (
-    <div className="landingPage-section2-box">
-      <div className="landingPage-section2-story">
+    <div className='landingPage-section2-box'>
+      <div className='landingPage-section2-story'>
         <p>
           张兆烨是一名热情洋溢的人工智能硕士毕业生，于 2024 年 9
           月毕业于新南威尔士大学。他的兴趣涵盖人工智能和全栈开发，尤其专注于前端设计和智能算法的应用。他热衷于探索技术与创意的融合，以开发实用的解决方案。
@@ -79,9 +80,11 @@ const LandingPage_cn = () => {
         </p>
       </div>
 
-      <div className="landingPage-section2-contact-button">
-        <Button variant="text">
-          <a href="/cn/contact">立即沟通</a>
+      <div className='landingPage-section2-contact-button'>
+        <Button variant='text'>
+          <NavLink to='/cn/contact' style={{ color: '#002766' }}>
+            立即沟通
+          </NavLink>
         </Button>
       </div>
     </div>
@@ -91,14 +94,14 @@ const LandingPage_cn = () => {
 
   return (
     <>
-      <div className="landingPage-container">
+      <div className='landingPage-container'>
         {sections.map((section, i) => (
           <section
             key={i}
             ref={(el) => (sectionsRef.current[i] = el)} // 将元素存入 refs
-            className="landingPage-section landingPage-hidden" // 初始设置为隐藏
+            className='landingPage-section landingPage-hidden' // 初始设置为隐藏
           >
-            <div className="landingPage-inner-div">{section}</div>
+            <div className='landingPage-inner-div'>{section}</div>
           </section>
         ))}
       </div>
